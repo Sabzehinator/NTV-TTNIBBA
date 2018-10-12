@@ -1,8 +1,7 @@
 <?php
 
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+
 
 
 try{
@@ -13,19 +12,47 @@ try{
     die("ERROR: Could not connect. " . $e->getMessage());
 }
  
-	
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-$result = mysql_query("select * from login where username = '$username' and password = '$password'")
-or die("Misslyckat query databas".mysql_error());
+$r_password = $_REQUEST['password'];
 
-$row = mysql_fetch_array($result);
-
-if($row['username'] == $username && $row['password'] == $password){
-	
-	echo "Login lyckades Välkommen" .$row['username'];
-	
-} else{
-	echo "Mysslyckat";
+try{
+    $sql = "SELECT * FROM login WHERE username ='".$username."'";  
+    $result = $pdo->query($sql);
+    if($result->rowCount() > 0){
+            echo "<table>";
+            echo "<tr>";
+            echo "<th>username</th>";
+            echo "<th>password</th>";
+            echo "</tr>";
+        while($row = $result->fetch()){
+            echo "<tr>";
+            echo "<td>" . $row['username'] . "</td>";
+            echo "<td>" . $row['password'] . "</td>";
+            echo "</tr>";
+			
+			
+			echo password_verify($password, $username);
+			
+			
+			if ($password == $r_password) {
+                echo 'Password is valid!';
+            } else {
+              echo 'Invalid password.';
+            }			
+        }
+        echo "</table>";
+        // Free result set
+        unset($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} catch(PDOException $e){
+    die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
+ 
+// Close connection
+unset($pdo);
 
 ?>
