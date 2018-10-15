@@ -7,8 +7,20 @@
 <title>Bokning</title>
 </head>
 <body <body style="background-image: url(https://www.centralabygg.com/siteassets/regional-assets/emea/centrala-bygg-sweden/buying-guides/tvattmaskiner/washingmachines-electrolux-side-by-side-2400x1800.jpg)">
- <div class="container">
-<form>  
+<div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div class="container">
+<div class="container-fluid">  
+<div class="col-lg-12">
   <table class="table table-bordered table-dark">
     <thead>
       <tr>
@@ -23,80 +35,90 @@
     </thead>
     <tbody>
       <tr>
-        <td>08:00 - 10:00</td>
-        <td>08:00 - 10:00</td>
-        <td>08:00 - 10:00</td>
-		<td>08:00 - 10:00</td>
-        <td>08:00 - 10:00</td>
-        <td>08:00 - 10:00</td>
-		<td>08:00 - 10:00</td>
+        <td><button type="button" class="btn btn-info active">08:00 - 10:00</button></td>
+        <td><button type="button" class="btn btn-info active">08:00 - 10:00</button></td>
+		<td><button type="button" class="btn btn-info active">08:00 - 10:00</button></td>
+		<td><button type="button" class="btn btn-info active">08:00 - 10:00</button></td>
+		<td><button type="button" class="btn btn-info active">08:00 - 10:00</button></td>
+		<td><button type="button" class="btn btn-info active">08:00 - 10:00</button></td>
+		<td><button type="button" class="btn btn-info active">08:00 - 10:00</button></td>
       </tr>
       <tr>
-        <td>10:00 - 12:00</td>
-		<td>10:00 - 12:00</td>
-		<td>10:00 - 12:00</td>
-		<td>10:00 - 12:00</td>
-		<td>10:00 - 12:00</td>
-		<td>10:00 - 12:00</td>
-		<td>10:00 - 12:00</td>
+        <td><button type="button" class="btn btn-primary active">10:00 - 12:00</button></td>
+		<td><button type="button" class="btn btn-primary active">10:00 - 12:00</button></td>
+		<td><button type="button" class="btn btn-primary active">10:00 - 12:00</button></td>
+		<td><button type="button" class="btn btn-primary active">10:00 - 12:00</button></td>
+		<td><button type="button" class="btn btn-primary active">10:00 - 12:00</button></td>
+		<td><button type="button" class="btn btn-primary active">10:00 - 12:00</button></td>
+		<td><button type="button" class="btn btn-primary active">10:00 - 12:00</button></td>
       </tr>
       <tr>
-        <td>12:00 - 14:00</td>
-		<td>12:00 - 14:00</td>
-		<td>12:00 - 14:00</td>
-		<td>12:00 - 14:00</td>
-		<td>12:00 - 14:00</td>
-		<td>12:00 - 14:00</td>
-		<td>12:00 - 14:00</td>
+        <td><button type="button" class="btn btn-info active">12:00 - 14:00</button></td>
+		<td><button type="button" class="btn btn-info active">12:00 - 14:00</button></td>
+		<td><button type="button" class="btn btn-info active">12:00 - 14:00</button></td>
+		<td><button type="button" class="btn btn-info active">12:00 - 14:00</button></td>
+		<td><button type="button" class="btn btn-info active">12:00 - 14:00</button></td>
+		<td><button type="button" class="btn btn-info active">12:00 - 14:00</button></td>
+		<td><button type="button" class="btn btn-info active">12:00 - 14:00</button></td>
       </tr>
 	  <tr>
-        <td>14:00 - 16:00</td>
-		<td>14:00 - 16:00</td>
-		<td>14:00 - 16:00</td>
-		<td>14:00 - 16:00</td>
-		<td>14:00 - 16:00</td>
-		<td>14:00 - 16:00</td>
-		<td>14:00 - 16:00</td>
+        <td><button type="button" class="btn btn-primary active">14:00 - 16:00</button></td>
+		<td><button type="button" class="btn btn-primary active">14:00 - 16:00</button></td>
+		<td><button type="button" class="btn btn-primary active">14:00 - 16:00</button></td>
+		<td><button type="button" class="btn btn-primary active">14:00 - 16:00</button></td>
+		<td><button type="button" class="btn btn-primary active">14:00 - 16:00</button></td>
+		<td><button type="button" class="btn btn-primary active">14:00 - 16:00</button></td>
+		<td><button type="button" class="btn btn-primary active">14:00 - 16:00</button></td>
       </tr>
 	  <tr>
-        <td>16:00 - 18:00</td>
-		<td>16:00 - 18:00</td>
-		<td>16:00 - 18:00</td>
-		<td>16:00 - 18:00</td>
-		<td>16:00 - 18:00</td>
-		<td>16:00 - 18:00</td>
-		<td>16:00 - 18:00</td>
+        <td><button type="button" class="btn btn-info active">16:00 - 18:00</button></td>
+		<td><button type="button" class="btn btn-info active">16:00 - 18:00</button></td>
+		<td><button type="button" class="btn btn-info active">16:00 - 18:00</button></td>
+		<td><button type="button" class="btn btn-info active">16:00 - 18:00</button></td>
+		<td><button type="button" class="btn btn-info active">16:00 - 18:00</button></td>
+		<td><button type="button" class="btn btn-info active">16:00 - 18:00</button></td>
+		<td><button type="button" class="btn btn-info active">16:00 - 18:00</button></td>
       </tr>
 	  <tr>
-        <td>18:00 - 20:00</td>
-		<td>18:00 - 20:00</td>
-		<td>18:00 - 20:00</td>
-		<td>18:00 - 20:00</td>
-		<td>18:00 - 20:00</td>
-		<td>18:00 - 20:00</td>
-		<td>18:00 - 20:00</td>
+        <td><button type="button" class="btn btn-primary active">18:00 - 20:00</button></td>
+		<td><button type="button" class="btn btn-primary active">18:00 - 20:00</button></td>
+		<td><button type="button" class="btn btn-primary active">18:00 - 20:00</button></td>
+		<td><button type="button" class="btn btn-primary active">18:00 - 20:00</button></td>
+		<td><button type="button" class="btn btn-primary active">18:00 - 20:00</button></td>
+		<td><button type="button" class="btn btn-primary active">18:00 - 20:00</button></td>
+		<td><button type="button" class="btn btn-primary active">18:00 - 20:00</button></td>
       </tr>
 	  <tr>
-        <td>20:00 - 22:00</td>
-		<td>20:00 - 22:00</td>
-		<td>20:00 - 22:00</td>
-		<td>20:00 - 22:00</td>
-		<td>20:00 - 22:00</td>
-		<td>20:00 - 22:00</td>
-		<td>20:00 - 22:00</td>
+        <td><button type="button" class="btn btn-info active">20:00 - 22:00</button></td>
+		<td><button type="button" class="btn btn-info active">20:00 - 22:00</button></td>
+		<td><button type="button" class="btn btn-info active">20:00 - 22:00</button></td>
+		<td><button type="button" class="btn btn-info active">20:00 - 22:00</button></td>
+		<td><button type="button" class="btn btn-info active">20:00 - 22:00</button></td>
+		<td><button type="button" class="btn btn-info active">20:00 - 22:00</button></td>
+		<td><button type="button" class="btn btn-info active">20:00 - 22:00</button></td>
       </tr>
 	  <tr>
-        <td>22:00 - 00:00</td>
-		<td>22:00 - 00:00</td>
-		<td>22:00 - 00:00</td>
-		<td>22:00 - 00:00</td>
-		<td>22:00 - 00:00</td>
-		<td>22:00 - 00:00</td>
-		<td>22:00 - 00:00</td>
+        <td><button type="button" class="btn btn-primary active">22:00 - 00:00</button></td>
+		<td><button type="button" class="btn btn-primary active">22:00 - 00:00</button></td>
+		<td><button type="button" class="btn btn-primary active">22:00 - 00:00</button></td>
+		<td><button type="button" class="btn btn-primary active">22:00 - 00:00</button></td>
+		<td><button type="button" class="btn btn-primary active">22:00 - 00:00</button></td>
+		<td><button type="button" class="btn btn-primary active">22:00 - 00:00</button></td>
+		<td><button type="button" class="btn btn-primary active">22:00 - 00:00</button></td>
       </tr>
+	  <tr>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td><button type="button" class="btn btn-primary active">Boka</button></td>
+	  </tr>
     </tbody>
   </table>
   </form>
+  </div>
 </div>
 </body>
 
