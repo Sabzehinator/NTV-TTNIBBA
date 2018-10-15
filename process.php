@@ -1,9 +1,7 @@
+
 <?php
-
-
-
-
-
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
 try{
     $pdo = new PDO("mysql:host=localhost;dbname=bokning", "root", "");
     // Set the PDO error mode to exception
@@ -12,11 +10,14 @@ try{
     die("ERROR: Could not connect. " . $e->getMessage());
 }
  
-$username = $_POST['username'];
-$password = $_POST['password'];
 
-$r_password = $_REQUEST['password'];
-
+ $username = $_POST['username'];
+ $username = $_REQUEST['username'];
+ 
+ 
+ $password = $_POST['password'];
+ 
+ 
 try{
     $sql = "SELECT * FROM login WHERE username ='".$username."'";  
     $result = $pdo->query($sql);
@@ -31,13 +32,14 @@ try{
             echo "<td>" . $row['username'] . "</td>";
             echo "<td>" . $row['password'] . "</td>";
             echo "</tr>";
+			$hash=$row['password'];
+			
+			echo password_verify($password,$hash);
 			
 			
-			echo password_verify($password, $username);
-			
-			
-			if ($password == $r_password) {
-                echo 'Password is valid!';
+			if (password_verify($password, $hash)) {
+                header('Location: Bokning.php');
+				exit;
             } else {
               echo 'Invalid password.';
             }			
@@ -54,5 +56,4 @@ try{
  
 // Close connection
 unset($pdo);
-
 ?>

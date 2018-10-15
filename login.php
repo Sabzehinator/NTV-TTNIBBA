@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body <body style="background-image: url(https://www.centralabygg.com/siteassets/regional-assets/emea/centrala-bygg-sweden/buying-guides/tvattmaskiner/washingmachines-electrolux-side-by-side-2400x1800.jpg)">
-    <div action="process.php" id="login" method="POST">
+    <form action="process.php" id="login" method="POST">
         <h3 class="text-body text-center text-white pt-5"></h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
@@ -21,7 +21,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
-                                <input type="password" name="password" id="pass" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">        
                                 <input type="submit" name="login" class="btn btn-info btn-md" value="Login">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 
 </html>
