@@ -115,7 +115,7 @@
 	  <td></td>
 	  <td></td>
 	  <td></td>
-	  <td><button type="button" class="btn btn-primary active">Boka</button></td>
+	  <td><input type="submit" name="boka" class="btn btn-info btn-md" value="Boka">
 	  </tr>
     </tbody>
   </table>
