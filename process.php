@@ -12,9 +12,6 @@ try{
  
 
  $username = $_POST['username'];
- $username = $_REQUEST['username'];
- 
- 
  $password = $_POST['password'];
  
  
@@ -22,19 +19,14 @@ try{
     $sql = "SELECT * FROM login WHERE username ='".$username."'";  
     $result = $pdo->query($sql);
     if($result->rowCount() > 0){
-            echo "<table>";
-            echo "<tr>";
-            echo "<th>username</th>";
-            echo "<th>password</th>";
-            echo "</tr>";
         while($row = $result->fetch()){
-            echo "<tr>";
-            echo "<td>" . $row['username'] . "</td>";
-            echo "<td>" . $row['password'] . "</td>";
-            echo "</tr>";
-			$hash=$row['password'];
+           
+             $row['username'];
+             $row['password'];
+            
+			 $hash=$row['password'];
 			
-			echo password_verify($password,$hash);
+			
 			
 			
 			if (password_verify($password, $hash)) {

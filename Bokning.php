@@ -7,6 +7,8 @@
 <title>Bokning</title>
 </head>
 <body <body style="background-image: url(https://www.centralabygg.com/siteassets/regional-assets/emea/centrala-bygg-sweden/buying-guides/tvattmaskiner/washingmachines-electrolux-side-by-side-2400x1800.jpg)">
+
+<form action="insertbokning.php" id="login" method="POST">
 <div>
 <br>
 <br>
@@ -121,7 +123,7 @@
   </div>
 </div>
 </body>
-
+</form>
 </html>
 
 <?php
