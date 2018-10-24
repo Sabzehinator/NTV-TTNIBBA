@@ -26,15 +26,29 @@ try{
             
 			 $hash=$row['password'];
 			
-			
-			
-			
-			if (password_verify($password, $hash)) {
+			if (password_verify($password, $hash) && $username == 'admin') {
+                header('Location: Bokning.php');
+				exit;
+            } else {
+             
+			 if (password_verify($password, $hash)) {
                 header('Location: Bokning.php');
 				exit;
             } else {
               echo 'Invalid password.';
-            }			
+            }		
+			 
+			 
+			 
+			 
+            }		
+			
+			
+			
+
+			
+
+			
         }
         echo "</table>";
         // Free result set
@@ -48,4 +62,7 @@ try{
  
 // Close connection
 unset($pdo);
+
+
+
 ?>

@@ -10,6 +10,18 @@ $("#boka").click(function()){
 	
 	
 }
+
+
+$(".buttonJS").click(function()){
+	
+	
+	
+	
+	
+	
+	
+	
+}
 	
 	
 	

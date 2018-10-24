@@ -34,13 +34,13 @@
 								<td><button type="button" class="btn btn-info active buttonJS">08:00 - 10:00</button></td>
 								<td><button type="button" class="btn btn-info active buttonJS">08:00 - 10:00</button></td>
 								<td><button type="button" class="btn btn-info active buttonJS">08:00 - 10:00</button></td>
-								<td><button type="button" class="btn btn-info active buttonJS08:00 - 10:00</button></td>
+								<td><button type="button" class="btn btn-info active buttonJS">08:00 - 10:00</button></td>
 								<td><button type="button" class="btn btn-info active buttonJS">08:00 - 10:00</button></td>
 								<td><button type="button" class="btn btn-info active buttonJS">08:00 - 10:00</button></td>
 								<td><button type="button" class="btn btn-info active buttonJS">08:00 - 10:00</button></td>
 							  </tr>
 							  <tr>
-								<td><button type="button" class="btn btn-primary active buttonJS10:00 - 12:00</button></td>
+								<td><button type="button" class="btn btn-primary active buttonJS">10:00 - 12:00</button></td>
 								<td><button type="button" class="btn btn-primary active buttonJS">10:00 - 12:00</button></td>
 								<td><button type="button" class="btn btn-primary active buttonJS">10:00 - 12:00</button></td>
 								<td><button type="button" class="btn btn-primary active buttonJS">10:00 - 12:00</button></td>
