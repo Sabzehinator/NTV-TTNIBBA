@@ -10,7 +10,7 @@
 <body <body style="background-image: url(https://www.centralabygg.com/siteassets/regional-assets/emea/centrala-bygg-sweden/buying-guides/tvattmaskiner/washingmachines-electrolux-side-by-side-2400x1800.jpg)">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="bokningJS.js"></script>
-	<form action="process.php" id="login" method="POST">
+	<form action="insertbokning.php" id="boka" method="POST">
 	
         <h3 class="text-body text-center text-white pt-5"></h3>
         <div class="container">
@@ -30,7 +30,14 @@
 								<th>Söndag</th>
 							  </tr>
 							</thead> 
+							
+							
+							
+							
 						<tbody>
+						
+						<time datatime="2018-W43">43</time>
+						<script async="" src="//www.google-analytics.com/analytics.js"></script>
 							  <tr>
 								<td><button type="button" id="1" class="btn btn-info active buttonJS Mon">08:00 - 10:00</button></td>
 								<td><button type="button" id="2" class="btn btn-info active buttonJS Tis ">08:00 - 10:00</button></td>
@@ -108,7 +115,7 @@
 						  <label>Tid:</label> <label id="tid"></label>
 						  <label>Dag:</label> <label id="dag"></label>
 						 
-						  <input type="submit" id="boka" name="boka" class="btn btn-info btn-md" value="Boka">
+						  <input type="submit" name="boka" class="btn btn-info btn-md" value="Boka">
                         </form>
                     </div>
                 </div>

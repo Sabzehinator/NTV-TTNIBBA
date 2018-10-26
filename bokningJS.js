@@ -5,16 +5,9 @@ $(".buttonJS").click(function(){
 	
 	var id = $(this).attr('id');
 
-	
-	
-	
-	
-	
-	
 	$(".buttonJS").css("background-color","blue");
 	
 	$("#"+id).css("background-color","green");
-	
 	
 	$("#tid").html($("#"+id).html());
 	
