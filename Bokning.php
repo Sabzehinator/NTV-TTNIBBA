@@ -35,9 +35,7 @@
 							
 							
 						<tbody>
-						
-						<time datatime="2018-W43">43</time>
-						<script async="" src="//www.google-analytics.com/analytics.js"></script>
+						<label>Vecka:</label> <label id="myWeek"></label>
 							  <tr>
 								<td><button type="button" id="1" class="btn btn-info active buttonJS Mon">08:00 - 10:00</button></td>
 								<td><button type="button" id="2" class="btn btn-info active buttonJS Tis ">08:00 - 10:00</button></td>

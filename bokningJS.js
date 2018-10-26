@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	
+	
+
+
+
 
 $(".buttonJS").click(function(){
 	
@@ -43,8 +47,9 @@ $(".buttonJS").click(function(){
 	{
 		$("#dag").html("Söndag");
 	}
-	
+
 });
+
 	
 	
 	
