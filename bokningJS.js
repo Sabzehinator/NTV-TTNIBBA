@@ -9,7 +9,7 @@ $(".buttonJS").click(function(){
 	
 	var id = $(this).attr('id');
 
-	$(".buttonJS").css("background-color","blue");
+	$(".buttonJS").css("background-color","#117A8B");
 	
 	$("#"+id).css("background-color","green");
 	
