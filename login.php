@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>	
+
 <!DOCTYPE html>
 <html lang = "sv">
 
@@ -10,7 +14,7 @@
     <form action="process.php" id="login" method="POST">
         <h3 class="text-body text-center text-white pt-5"></h3>
         <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-row" class="row justify-content-center align-items-center"> 
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
@@ -36,10 +40,7 @@
 
 </html>
 
-<?php
 
-
-?>
 
 
 

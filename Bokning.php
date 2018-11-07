@@ -112,8 +112,12 @@
 						  </table>
 						  <label>Tid:</label> <label id="tid"></label>
 						  <label>Dag:</label> <label id="dag"></label>
-						 
-						  <input type="submit" name="boka" class="btn btn-info btn-md" value="Boka">
+						  <label>Vecka:</label> <label  id="vecka"></label>
+						  <input type="HIDDEN" name="tid" id="tidvar"/>
+						  <input type="HIDDEN" name="dag" id="dagvar"/>
+						  <input type="HIDDEN" name="vecka" id="veckavar"/>
+						  
+						  <input type="submit" name="boka" class="btn btn-info btn-md" value="Boka"/>
                         </form>
                     </div>
                 </div>

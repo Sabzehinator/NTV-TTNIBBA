@@ -8,19 +8,23 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$id = $_POST['id'];
+$vecka = $_POST['vecka'];
+$dag = $_POST['dag'];
+$tid = $_POST['tid'];
 
+$id = $_SESSION["username"];
 
+	
 
-
- 
+/*
 // Escape user inputs for security
 $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
 $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
-$email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$email = mysqli_real_escape_string($link, $_REQUEST['email']); 
  
+ */
 // attempt insert query execution
-$sql = "INSERT INTO persons (first_name, last_name, email) VALUES ('$first_name', '$last_name', '$email')";
+$sql = "INSERT INTO bokadetider (id, vecka, dag, tid) VALUES ('$id', '$vecka', '$dag', '$tid')";
 if(mysqli_query($link, $sql)){
     echo "Records added successfully.";
 } else{
@@ -28,5 +32,7 @@ if(mysqli_query($link, $sql)){
 }
  
 // close connection
+
 mysqli_close($link);
+
 ?>

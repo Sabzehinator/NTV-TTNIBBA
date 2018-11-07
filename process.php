@@ -11,12 +11,12 @@ try{
 }
  
 
- $username = $_POST['username'];
- $password = $_POST['password'];
+ $_SESSION["username"] = $_POST['username'];
+ $_SESSION["password"] = $_POST['password'];
  
  
 try{
-    $sql = "SELECT * FROM login WHERE username ='".$username."'";  
+    $sql = "SELECT * FROM login WHERE username ='".$_SESSION["username"]."'";  
     $result = $pdo->query($sql);
     if($result->rowCount() > 0){
         while($row = $result->fetch()){
@@ -24,14 +24,15 @@ try{
              $row['username'];
              $row['password'];
             
+			 
 			 $hash=$row['password'];
 			
-			if (password_verify($password, $hash) && $username == 'admin') {
-                header('Location: Bokning.php');
+			if (password_verify($_SESSION["password"], $hash) && $_SESSION["username"] == 'admin') {
+                header('Location: adminpage.php');
 				exit;
             } else {
              
-			 if (password_verify($password, $hash)) {
+			 if (password_verify($_SESSION["password"], $hash)) {
                 header('Location: Bokning.php');
 				exit;
             } else {
