@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang = "sv">
 
@@ -11,6 +18,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="bokningJS.js"></script>
 	<form action="insertbokning.php" id="boka" method="POST">
+	
+	
+	
+	
+	
 	
         <h3 class="text-body text-center text-white pt-5"></h3>
         <div class="container">
@@ -110,6 +122,7 @@
 							  </tr>
 							</tbody>
 						  </table>
+						  
 						  <label>Tid:</label> <label id="tid"></label>
 						  <label>Dag:</label> <label id="dag"></label>
 						  <label>Vecka:</label> <label  id="vecka"></label>
@@ -128,8 +141,5 @@
 
 </html>
 
-<?php
 
-
-?>
 

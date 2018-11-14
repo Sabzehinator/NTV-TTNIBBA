@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 try{
@@ -27,7 +28,7 @@ try{
 			 
 			 $hash=$row['password'];
 			
-			if (password_verify($_SESSION["password"], $hash) && $_SESSION["username"] == 'admin') {
+			if (password_verify($_SESSION["password"], $hash) && $_SESSION["username"] == '0') {
                 header('Location: adminpage.php');
 				exit;
             } else {
@@ -36,7 +37,7 @@ try{
                 header('Location: Bokning.php');
 				exit;
             } else {
-              echo 'Invalid password.';
+              header('Location: login.php');
             }		
 			 
 			 
