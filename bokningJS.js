@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 
 
-
 $(".buttonJS").click(function(){
 	
 	var id = $(this).attr('id');
@@ -67,7 +66,8 @@ $(".buttonJS").click(function(){
 
 });
 
-	
+
+
 	
 	
 	
