@@ -1,8 +1,5 @@
 
 <?php
-session_start();
-
-
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 try{
@@ -12,40 +9,31 @@ try{
 } catch(PDOException $e){
     die("ERROR: Could not connect. " . $e->getMessage());
 }
- 
 
- $_SESSION["username"] = $_POST['username'];
- $_SESSION["password"] = $_POST['password'];
- 
- 
 try{
-    $sql = "SELECT * FROM login WHERE username ='".$_SESSION["username"]."'";  
+    $sql = "SELECT * FROM bokadetider";  
     $result = $pdo->query($sql);
+	
+	$amountOFRows = $result->rowCount();
+	
     if($result->rowCount() > 0){
+		echo "<script>";
+		echo "var bokadetider = new Array(".$amountOFRows.");";
+		
+	    $i = 0;
+		
         while($row = $result->fetch()){
            
-             $row['username'];
-             $row['password'];
-            
-			 
-			 $hash=$row['password'];
-			
-			if (password_verify($_SESSION["password"], $hash) && $_SESSION["username"] == '0') {
-                header('Location: adminpage.php');
-				exit;
-            } else {
-             
-			 if (password_verify($_SESSION["password"], $hash)) {
-                header('Location: hämtatider.php');
-				exit;
-            } else {
-              header('Location: login.php');
-            }		
-			 	 
-            }		
-				
+		   echo "bokadetider[$i] = \"u" .$row["id"]. "/v" .$row["vecka"]. "/d" .$row["dag"]. "/t" .$row["tid"]. "\" ;";
+            $i += 1;
+		   
+		   
+		   
+
         }
-        echo "</table>";
+		
+        echo "</script>";
+		
         // Free result set
         unset($result);
     } else{
@@ -54,7 +42,9 @@ try{
 } catch(PDOException $e){
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
-
+ 
+ include_once "Bokning.php";
+ 
  
 // Close connection
 unset($pdo);

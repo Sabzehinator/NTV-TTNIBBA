@@ -130,6 +130,10 @@ session_start();
 						  <input type="HIDDEN" name="dag" id="dagvar"/>
 						  <input type="HIDDEN" name="vecka" id="veckavar"/>
 						  
+						  
+						  
+						  
+
 						  <input type="submit" id="bokknapp"  name="boka" class="btn btn-info btn-md" value="Boka"/>
                         </form>
                     </div>
