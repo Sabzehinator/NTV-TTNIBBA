@@ -28,7 +28,7 @@ session_start();
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">        
-                                <input type="submit" name="login" class="btn btn-info btn-md" value="Login">
+                                <input type="submit" name="login" class="btn btn-info btn-md" value="Logga in">
                             </div>
                         </form>
                     </div>
