@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
   <title>Bokning</title>
+  
+  <link rel="stylesheet" type="text/css" href="stylebokning.css">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <style>
+  <style> 
+  
   </style>
 </head>
 <body style="background-image: url(https://www.centralabygg.com/siteassets/regional-assets/emea/centrala-bygg-sweden/buying-guides/tvattmaskiner/washingmachines-electrolux-side-by-side-2400x1800.jpg)">
@@ -406,10 +410,10 @@
   
   <!-- Left and right controls -->
   <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
+    <img src="https://d33wubrfki0l68.cloudfront.net/3b5950262acc2194d7893c1da67dcc2c5b23d29e/d8f9e/images/large_bitmapicons/arrows/arrow-end-left.png">
   </a>
   <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-     <img src="https://static1.squarespace.com/static/51b3dc8ee4b051b96ceb10de/t/5ba2ace088251ba18365ccd5/1537387750187/?format=2500w"> 
+    <img src="https://d33wubrfki0l68.cloudfront.net/1ce6328220e6d836b3ed5e4fce4b94de3076a5d0/d5843/images/large_bitmapicons/arrows/arrow-end-right.png"> 
   </a>
 </div>
 
