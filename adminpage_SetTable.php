@@ -16,9 +16,19 @@ try{
     $sql = "SELECT * FROM login"; 
     $result = $pdo->query($sql);
 //<!--while($result->rowCount() > 0)-->
-      while($row = $result->fetch())
+foreach ($_POST['the_data'] as $row)
 	{
 		
+		$SNNN = $_POST['the_data'];
+		
+	    $name =$_POST['name'];
+	    $email =$_POST['email'];
+	    $phone =$_POST['phone'];
+
+	    if(mysql_query("INSERT INTO users (name,email,phone) VALUES ('$name','$email','$phone')"))
+	    echo"successfully inserted";
+	    else
+	    echo "failed";
 		
 		
 		$sql = "INSERT INTO user (vecka, dag, tid) VALUES (:vecka, :dag, :tid)";

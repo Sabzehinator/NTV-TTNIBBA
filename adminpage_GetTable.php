@@ -16,37 +16,25 @@ try{
     $sql = "SELECT * FROM login"; 
     $result = $pdo->query($sql);
 //<!--while($result->rowCount() > 0)-->
+	$userNr = -1;
       while($row = $result->fetch())
 	{
-		
-		
-		
-		$sql = "INSERT INTO user (vecka, dag, tid) VALUES (:vecka, :dag, :tid)";
-		$stmt = $pdo->prepare($sql);
-		
-		$stmt->bindParam(':vecka', "VARXD");
-		$stmt->bindParam(':dag', "VARXD");
-		$stmt->bindParam(':tid', "VARXD");
-		
-		$stmt->execute();
-			/*
-			<tr>
-			<td><input type="text" class="user_1"></input></td>
-			<td><input type="text" class="pass_1"></input></td>
-			<td><input type="text" class="img_1"></input></td>
-			</tr>*/
-	
-	 /*<!--$row['username'];
-	 $row['password'];-->
+		$userNr++;
+		//echo "<div>".$row['title']."</div>";
 
-	 $hash=$row['password'];
-	
-	 if (password_verify($password, $hash) && $username == 'admin') 
-	 {
-		header('Location: Bokning.php');
-			exit;
-	 }	*/
+
+		echo "<tr>";
+		echo	"<td><input type=\"text\" class=\"user_1\" value=\"" .$row['username']. "\"/></td>";
+		echo	"<td><input type=\"text\" class=\"pass_1\" value=\"" .$row['password']. "\"/></td>";
+		// echo	"<td><input type=\"text\" class=\"bokn_1\" value=\"" .$row['bokningNr']. $userNr. "\"/></td>";
 		
+		echo	"<td>  </td>";
+		
+		echo	"<td><input type=\"text\" class=\"lägenhetsnr_1\" value=\"" .$row['lagenNr']. "\"/></td>";
+		echo	"<td><input type=\"text\" class=\"adress_1\" value=\"" .$row['adress']. "\"/></td>";
+		echo	"<td><input type=\"text\" class=\"img_1\" value=\" " .$row['image']. "\"/></td>";
+		echo "</tr>";
+
 	}
     
     unset($result);

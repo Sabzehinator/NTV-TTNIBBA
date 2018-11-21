@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "sv">
+
+
+<!-- Lägga till jkonton
+	ta bort konton
+	ändra usernames, passwords, och ev. profilbild
+	
+
+-->
+
+<head>
+<title> Login Sida</title>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="stylebokning.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="adminpage.js"></script>
+</head>
+<body <!--style="background-image: url(https://www.centralabygg.com/siteassets/regional-assets/emea/centrala-bygg-sweden/buying-guides/tvattmaskiner/washingmachines-electrolux-side-by-side-2400x1800.jpg)" -->>
+    <script type="text/javascript" src="bokningJS.js"></script>
+	<form id="login" method="POST">
+	
+        <div class="container">
+            <div id="login-row" class="row">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+						<table class="table table-bordered" id="ppl_Table">
+							<thead>
+							  <tr>
+								<th>username</th>
+								<th>password</th>
+								<th>bokning</th>
+								<th>lägenhets nummer</th>
+								<th>adress</th>
+								<th>image</th>
+							  </tr>
+							</thead> 
+						<tbody id="TABLEBODY">
+							  <tr>
+								<td><input type="text" class="user_1"/> </td>
+								<td><input type="text" class="pass_1"/> </td>
+								<td><input type="text" class="bokn_1"/> </td>
+								<td><input type="text" class="lägenhetsnr_1"/> </td>
+								<td><input type="text" class="adress_1"/> </td>
+								<td><input type="text" class="img_1"/> </td>
+							  </tr>
+						</tbody>
+						 </table><button type="button" id="boka_commit">Click Me Please!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
