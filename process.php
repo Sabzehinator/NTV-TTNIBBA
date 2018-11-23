@@ -14,23 +14,23 @@ try{
 }
  
 
- $_SESSION["username"] = $_POST['username'];
+ $_SESSION["lagenNr"] = $_POST['username'];
  $_SESSION["password"] = $_POST['password'];
  
  
 try{
-    $sql = "SELECT * FROM login WHERE username ='".$_SESSION["username"]."'";  
+    $sql = "SELECT * FROM login WHERE lagenNr ='".$_SESSION["lagenNr"]."'";  
     $result = $pdo->query($sql);
     if($result->rowCount() > 0){
         while($row = $result->fetch()){
            
-             $row['username'];
+             $row['lagenNr'];
              $row['password'];
             
 			 
 			 $hash=$row['password'];
 			
-			if (password_verify($_SESSION["password"], $hash) && $_SESSION["username"] == '0') {
+			if (password_verify($_SESSION["password"], $hash) && $_SESSION["lagenNr"] == '0') {
                 header('Location: adminpage.php');
 				exit;
             } else {

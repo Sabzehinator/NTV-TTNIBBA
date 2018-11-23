@@ -12,6 +12,7 @@ try{
 // Attempt create table query execution
 try{
     $sql = "CREATE TABLE login(
+	    
         username VARCHAR(30) NOT NULL,
         password CHAR(72) NOT NULL,
         lagenNr VARCHAR(30) NOT NULL,

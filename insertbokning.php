@@ -16,8 +16,8 @@ if($link === false){
 $vecka = $_POST['vecka'];
 $dag = $_POST['dag'];
 $tid = $_POST['tid'];
-
-$id = $_SESSION["username"];
+$idvar = $_POST['id'];
+$id = $_SESSION["lagenNr"];
 
 
 
@@ -25,7 +25,7 @@ $id = $_SESSION["username"];
 
 
 // attempt insert query execution
-$sql = "INSERT INTO bokadetider (id, vecka, dag, tid) VALUES ('$id', '$vecka', '$dag', '$tid')";
+$sql = "INSERT INTO bokadetider (lagNr, id, vecka, dag, tid) VALUES ('$idvar', '$id', '$vecka', '$dag', '$tid')";
 if(mysqli_query($link, $sql)){
     echo "Records added successfully.";
 	header('Location: Bokning.php');
