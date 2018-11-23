@@ -21,8 +21,53 @@ $(".buttonJS").click(function(){
 	
 	$("#tidvar").val($("#"+id).html());
 	
-    $("#vecka").html("1");
-	$("#veckavar").val("1");
+	if($("#"+id).hasClass("1"))
+	{
+		$("#vecka").html("1");
+	    $("#veckavar").val("1");
+	}
+	
+	if($("#"+id).hasClass("2"))
+	{
+		$("#vecka").html("2");
+	    $("#veckavar").val("2");
+	}
+	
+	if($("#"+id).hasClass("3"))
+	{
+		$("#vecka").html("3");
+	    $("#veckavar").val("3");
+	}
+	
+	if($("#"+id).hasClass("4"))
+	{
+		$("#vecka").html("4");
+	    $("#veckavar").val("4");
+	}
+	
+	if($("#"+id).hasClass("5"))
+	{
+		$("#vecka").html("5");
+	    $("#veckavar").val("5");
+	}
+	
+	if($("#"+id).hasClass("6"))
+	{
+		$("#vecka").html("6");
+	    $("#veckavar").val("6");
+	}
+	
+	if($("#"+id).hasClass("7"))
+	{
+		$("#vecka").html("7");
+	    $("#veckavar").val("7");
+	}
+	
+	if($("#"+id).hasClass("8"))
+	{
+		$("#vecka").html("8");
+	    $("#veckavar").val("8");
+	}
 	
 	if($("#"+id).hasClass("Mon"))
 	{
