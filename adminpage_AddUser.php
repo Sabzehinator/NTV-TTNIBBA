@@ -13,22 +13,35 @@ try{
 
  
 try{
-    $sql = "SELECT * FROM login"; 
-    $result = $pdo->query($sql);
 //<!--while($result->rowCount() > 0)-->
-      while($row = $result->fetch())
 	{
 		
+		$THE_DATA = $_POST['the_data'];
+
+	    $username =  $THE_DATA[0];
+	    $password =  $THE_DATA[1];
+	    //$bokning = $THE_DATA[2];
+	    $lagenNr = $THE_DATA[2];
+	    $adress = $THE_DATA[3];
+	    //$img = $THE_DATA[5];
+	    
+    $sql = "INSERT INTO login (username, password, lagenNr, adress) VALUES ('$username','$password', '$lagenNr', '$adress')";
+    $result = $pdo->query($sql);
+/*
+	    if($pdo->query("INSERT INTO users (username, password, lagenNr, adress) VALUES ('$username','$password', '$lagenNr', '$adress')"))
+	    echo"successfully inserted";
+	    else
+	    echo "failed";
+		*/
 		
-		
-		$sql = "INSERT INTO user (vecka, dag, tid) VALUES (:vecka, :dag, :tid)";
+		/*$sql = "INSERT INTO user (vecka, dag, tid) VALUES (:vecka, :dag, :tid)";
 		$stmt = $pdo->prepare($sql);
 		
 		$stmt->bindParam(':vecka', "VARXD");
 		$stmt->bindParam(':dag', "VARXD");
 		$stmt->bindParam(':tid', "VARXD");
 		
-		$stmt->execute();
+		$stmt->execute();*/
 			/*
 			<tr>
 			<td><input type="text" class="user_1"></input></td>
