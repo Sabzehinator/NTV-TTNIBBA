@@ -25,7 +25,7 @@ session_start();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="bokningJS.js"></script>
 <form action="insertbokning.php" id="boka" method="POST">
-<b>Välkommen ditt Lägenhetsnummer är: <?php echo $_SESSION["username"]; ?>
+<b>Välkommen ditt Lägenhetsnummer är: <?php echo $_SESSION["lagenNr"]; ?>
 <br>
 <br>
 <br>
@@ -813,7 +813,7 @@ session_start();
 <input type="HIDDEN" name="tid" id="tidvar"/>
 <input type="HIDDEN" name="dag" id="dagvar"/>
 <input type="HIDDEN" name="vecka" id="veckavar"/>
-						  
+<input type="HIDDEN" name="id" id="idVar"/>												
 <input type="submit" id="bokknapp"  name="boka" class="btn btn-info btn-md" value="Boka"/>
 
 </div>

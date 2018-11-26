@@ -1,13 +1,36 @@
 $(document).ready(function(){
 	
+
+
+
+/*
+var bokadetiderlength = bokadetider.Length;
+	
+	
+for(var i = 0; i < bokadetiderlength; i++)
+{
+	
+var search = bokadetider[i].search("/");
 	
 
+var vecka = bokadetider[i].search("v");
+var dag = bokadetider[i].search("d");
+var tid = bokadetider[i].search("t");
 
+
+
+$("#"+id).css("background-color","green");
+	
+	
+}
+	
+*/	
+	
 
 $(".buttonJS").click(function(){
 	
-	var id = $(this).attr('id');
-
+	
+    var id = $(this).attr('id');
 
 	$(".buttonJS").css("background-color","blue");
 		
@@ -21,6 +44,12 @@ $(".buttonJS").click(function(){
 	
 	$("#tidvar").val($("#"+id).html());
 	
+
+    $("#vecka").html("1");
+	$("#veckavar").val("1");
+	$("#idVar").val("#"+id);
+	
+
 	if($("#"+id).hasClass("1"))
 	{
 		$("#vecka").html("1");
