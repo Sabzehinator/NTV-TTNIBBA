@@ -39,11 +39,11 @@ if(!isset($_SESSION))
     <div class="carousel-item active">
 		<div class="container">
 		
-		<h1> Vecka 1 </h1>
+		<h1 class="text-info"> Vecka 1 </h1>
 		
 			<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -134,11 +134,11 @@ if(!isset($_SESSION))
 	<div class="carousel-item">	
 		<div class="container">
 		
-		<h1> Vecka 2 </h1>
+		<h1 class="text-info"> Vecka 2 </h1>
 		
 				<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -229,11 +229,11 @@ if(!isset($_SESSION))
 	  <div class="carousel-item">	
 		<div class="container">
 		
-		<h1> Vecka 3 </h1>
+		<h1 class="text-info"> Vecka 3 </h1>
 		
 				<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -324,11 +324,11 @@ if(!isset($_SESSION))
 	  <div class="carousel-item">	
 		<div class="container">
 		
-		<h1> Vecka 4 </h1>
+		<h1 class="text-info"> Vecka 4 </h1>
 		
 				<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -419,11 +419,11 @@ if(!isset($_SESSION))
 	  <div class="carousel-item">	
 		<div class="container">
 		
-		<h1> Vecka 5 </h1>
+		<h1 class="text-info"> Vecka 5 </h1>
 		
 				<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -514,11 +514,11 @@ if(!isset($_SESSION))
 	  <div class="carousel-item">	
 		<div class="container">
 		
-		<h1> Vecka 6 </h1>
+		<h1 class="text-info"> Vecka 6 </h1>
 		
 				<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -609,11 +609,11 @@ if(!isset($_SESSION))
 	  <div class="carousel-item">	
 		<div class="container">
 		
-		<h1> Vecka 7 </h1>
+		<h1 class="text-info"> Vecka 7 </h1>
 		
 				<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -704,11 +704,11 @@ if(!isset($_SESSION))
 	  <div class="carousel-item">	
 		<div class="container">
 		
-		<h1> Vecka 8 </h1>
+		<h1 class="text-info"> Vecka 8 </h1>
 		
 				<table class="table table-bordered">
 							<thead>
-							  <tr>
+							  <tr class="text-info">
 								<th>Måndag</th>
 								<th>Tisdag</th>
 								<th>Onsdag</th>
@@ -810,9 +810,9 @@ if(!isset($_SESSION))
 
 <div class="container">
 
-<label>Tid:</label> <label id="tid"></label>
-<label>Dag:</label> <label id="dag"></label>
-<label>Vecka:</label> <label  id="vecka"></label>
+<label class="text-info">Tid:</label> <label id="tid"></label>
+<label class="text-info">Dag:</label> <label id="dag"></label>
+<label class="text-info">Vecka:</label> <label  id="vecka"></label>
 <input type="HIDDEN" name="tid" id="tidvar"/>
 <input type="HIDDEN" name="dag" id="dagvar"/>
 <input type="HIDDEN" name="vecka" id="veckavar"/>
