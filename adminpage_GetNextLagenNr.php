@@ -1,4 +1,5 @@
 <?php
+
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 try{
@@ -9,22 +10,45 @@ try{
     die("ERROR: Could not connect. " . $e->getMessage());
 }
  
-// Attempt create table query execution
+
+ 
 try{
-    $sql = "CREATE TABLE login(
-	    
-        username VARCHAR(30) NOT NULL,
-        password CHAR(72) NOT NULL,
-        lagenNr VARCHAR(30) NOT NULL,
-        adress VARCHAR(30) NOT NULL,
-	  image MEDIUMTEXT NOT NULL
-    )";    
-    $pdo->exec($sql);
-    echo "Table created successfully.";
-} catch(PDOException $e){
+    $sql = "SELECT * FROM login"; 
+    $result = $pdo->query($sql);
+    $array = $result->fetchAll();
+    
+	
+    for ($i = 0; $i < $result->rowCount() + 10; $i++)
+    {
+		$done = true;
+		for ($x = 0; $x < count($array); $x++)
+		{
+			if ($array[$x]['lagenNr'] == $i)
+			{
+				$done = false;
+			}
+		}
+		
+		if ($done)
+		{
+			echo $i;
+			break;
+		}
+	 
+    } 
+    
+    
+    unset($result);
+} 
+catch(PDOException $e)
+{
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
  
 // Close connection
 unset($pdo);
+
+
+
 ?>
+

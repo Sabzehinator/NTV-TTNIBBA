@@ -4,36 +4,58 @@ $(document).ready(function () {
         $("#TABLEBODY").append(html);
     });
 
-    document.getElementById("boka_commit").onclick = (function () {
+    document.getElementById("save_changes").onclick = (function () {
         var thedata = [];
         var table = document.getElementById("ppl_Table");
 
         thedata[0] = table.rows[1].cells[0].firstChild.value;
         thedata[1] = table.rows[1].cells[1].firstChild.value;
-        thedata[2] = table.rows[1].cells[3].firstChild.value;
-        thedata[3] = table.rows[1].cells[4].firstChild.value;
+        //thedata[2] = table.rows[1].cells[2].innerText;
+        thedata[3] = table.rows[1].cells[3].firstChild.value;
+        $.ajax({ url: "adminpage_GetNextLagenNr.php" }).done(function (html) {
 
-       //thedata = [table.rows[0].cells[0], table.rows[0].cells[1], table.rows[0].cells[2], table.rows[0].cells[3]];
-        
-        //alert("sad"); // TRIGGERED
-        //document.getElementById("boka_commit").innerHTML = (thedata[0] as HTMLTableCellElement).innerText;
-        //document.getElementById("boka_commit").innerHTML = thedata[0];
-        alert("Commencing database addition attempt.");
-        
-        $.ajax({
-            url: 'adminpage_AddUser.php',
-            type: 'POST',
-            data: { the_data: thedata }/*,
-            success: function (data) {
-                console.log(data); // Inspect this in your console
-            }*/
+            thedata[2] = html.trim();
+
+            files = document.getElementById("the_image").files;
+
+            if (files && files[0]) {
+
+                var FR = new FileReader();
+
+                FR.onload = function (event) {
+                    thedata[4] = event.target.result;
+
+                    if (thedata[0] != "")
+                        $.ajax({
+                            url: 'adminpage_AddUser.php',
+                            type: 'POST',
+                            data: { the_data: thedata },
+                            success: function (data) {
+                                console.log(data);
+                            }
+                        });
+                };
+
+                FR.readAsDataURL(files[0]).done;
+            }
         });
 
-        alert("Attempt finished."); // DID NAHT TRIGGUH 
-
-
-        /*//$.ajax({ url: "adminpage_SetTable.php" }).done(function (html) {
-            $("#login").append(html);
-        });*/
     });
+
+
+    document.getElementById("delete").onclick = (function () {
+        user_action_remove(document.getElementById("lagenNrTXTB").value);
+    });
+
+    function user_action_remove(lagenNr) {
+        $.ajax({
+            url: 'adminpage_DeleteUser.php',
+            type: 'POST',
+            data: { the_data: lagenNr },
+            success: function (data) {
+                console.log(data);
+            }
+        });
+
+    };
 });
