@@ -1,6 +1,8 @@
-
 <?php
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
@@ -31,15 +33,15 @@ try{
 			 $hash=$row['password'];
 			
 			if (password_verify($_SESSION["password"], $hash) && $_SESSION["lagenNr"] == '0') {
-                header('Location: adminpage.php');
+                include_once "adminpage.php";
 				exit;
             } else {
              
 			 if (password_verify($_SESSION["password"], $hash)) {
-                header('Location: hämtatider.php');
+               include_once "hämtatider.php";
 				exit;
             } else {
-              header('Location: login.php');
+              include_once "login.php";
             }		
 			 	 
             }		

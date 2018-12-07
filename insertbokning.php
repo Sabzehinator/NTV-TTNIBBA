@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
@@ -16,7 +19,7 @@ if($link === false){
 $vecka = $_POST['vecka'];
 $dag = $_POST['dag'];
 $tid = $_POST['tid'];
-$idvar = $_POST['id'];
+$idvar = $_POST['knappid'];
 $id = $_SESSION["lagenNr"];
 
 
@@ -25,10 +28,12 @@ $id = $_SESSION["lagenNr"];
 
 
 // attempt insert query execution
-$sql = "INSERT INTO bokadetider (lagNr, id, vecka, dag, tid) VALUES ('$idvar', '$id', '$vecka', '$dag', '$tid')";
-if(mysqli_query($link, $sql)){
+$sql = "UPDATE bokadetider SET lagNr='".$id."' , id='".$idvar."', vecka='".$vecka."', dag='".$dag."', tid='".$tid."'
+ WHERE lagNr='".$_SESSION["lagenNr"]."'";
+if(mysqli_query($link, $sql)){ 
     echo "Records added successfully.";
-	header('Location: Bokning.php');
+	include_once "hämtatider.php";
+
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }

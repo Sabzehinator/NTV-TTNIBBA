@@ -1,5 +1,6 @@
-
 <?php
+
+
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 try{
@@ -43,7 +44,7 @@ try{
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
  
- include_once "Bokning.php";
+include_once "Bokning.php";
  
  
 // Close connection

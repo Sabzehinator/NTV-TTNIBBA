@@ -1,44 +1,43 @@
 $(document).ready(function(){
 	
 
-
-
-/*
-var bokadetiderlength = bokadetider.Length;
+var bokadetiderlength = bokadetider.length;
 	
-	
+
 for(var i = 0; i < bokadetiderlength; i++)
 {
 	
-var search = bokadetider[i].search("/");
-	
-
-var vecka = bokadetider[i].search("v");
-var dag = bokadetider[i].search("d");
-var tid = bokadetider[i].search("t");
+var knappidpos = bokadetider[i].search("u");
+var substringend = bokadetider[i].search("/");
+var knappid = bokadetider[i].substring((knappidpos + 1), (substringend));
 
 
 
-$("#"+id).css("background-color","green");
-	
+
+$("#"+knappid).css("background-color","red");
+$("#"+knappid).prop("disabled",true);
+
+
 	
 }
-	
-*/	
-	
+
+	var oldid;
 
 $(".buttonJS").click(function(){
-	
-	
-    var id = $(this).attr('id');
+	var id = $(this).attr('id');
 
-	$(".buttonJS").css("background-color","blue");
+	
+	
+	
 		
 
-	$(".buttonJS").css("background-color","#117A8B");
+	$("#"+oldid).css("background-color","#117A8B");
 
 	
+	
 	$("#"+id).css("background-color","green");
+	
+	oldid = id;
 	
 	$("#tid").html($("#"+id).html());
 	
@@ -47,7 +46,7 @@ $(".buttonJS").click(function(){
 
     $("#vecka").html("1");
 	$("#veckavar").val("1");
-	$("#idVar").val("#"+id);
+	$("#idVar").val(id);
 	
 
 	if($("#"+id).hasClass("1"))
@@ -138,6 +137,8 @@ $(".buttonJS").click(function(){
 		$("#dagvar").val("Söndag");
 	}
 
+	
+	
 });
 
 

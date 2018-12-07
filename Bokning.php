@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 
 ?>
@@ -813,7 +816,7 @@ session_start();
 <input type="HIDDEN" name="tid" id="tidvar"/>
 <input type="HIDDEN" name="dag" id="dagvar"/>
 <input type="HIDDEN" name="vecka" id="veckavar"/>
-<input type="HIDDEN" name="id" id="idVar"/>												
+<input type="HIDDEN" name="knappid" id="idVar"/>												
 <input type="submit" id="bokknapp"  name="boka" class="btn btn-info btn-md" value="Boka"/>
 
 </div>
