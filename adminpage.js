@@ -3,6 +3,11 @@ $(document).ready(function () {
     $.ajax({ url: "adminpage_GetTable.php" }).done(function (html) {
         $("#TABLEBODY").append(html);
     });
+			$( document ).ajaxComplete(function( event, xhr, settings ) {
+		  if ( settings.url === "adminpage_AddUser.php"  | settings.url ==="adminpage_DeleteUser.php") {
+		window.location.reload(true); // when done.
+		  }
+		});
 
     document.getElementById("save_changes").onclick = (function () {
         var thedata = [];
@@ -26,6 +31,7 @@ $(document).ready(function () {
                     thedata[4] = event.target.result;
 
                     if (thedata[0] != "")
+					{
                         $.ajax({
                             url: 'adminpage_AddUser.php',
                             type: 'POST',
@@ -34,6 +40,7 @@ $(document).ready(function () {
                                 console.log(data);
                             }
                         });
+					}
                 };
 
                 FR.readAsDataURL(files[0]).done;

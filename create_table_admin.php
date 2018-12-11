@@ -11,6 +11,10 @@ try{
  
 // Attempt create table query execution
 try{
+    $sql = "DROP TABLE IF EXISTS `bokning`.`login`";    
+    $pdo->exec($sql);
+    $sql = "DROP TABLE IF EXISTS `bokning`.`bokadetider`";    
+    $pdo->exec($sql);
     $sql = "CREATE TABLE login(
 	    
         username VARCHAR(30) NOT NULL,
