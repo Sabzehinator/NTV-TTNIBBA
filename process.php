@@ -33,7 +33,7 @@ try{
 			 $hash=$row['password'];
 			
 			if (password_verify($_SESSION["password"], $hash) && $_SESSION["lagenNr"] == '0') {
-                include_once "adminpage.php";
+                include_once "adminpage.html";
 				exit;
             } else {
              

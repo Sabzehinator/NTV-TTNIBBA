@@ -32,6 +32,28 @@ try{
 		
 		
 		
+		
+	}
+    
+    unset($result);
+} 
+catch(PDOException $e)
+{
+    die("ERROR: Could not able to execute $sql. " . $e->getMessage());
+}
+try{
+	{
+		
+	
+		$sql = "INSERT INTO bokning (lagenNr, id, vecka, dag, tid) VALUES ('$lagenNr','0','0','0','0')";
+		$result = $pdo->query($sql);
+		
+		// insert "INSERT INTO bokning" here
+		// lägenhetsnummer finns i variabeln $lagenNr fast det kan vara en string, idk.
+		
+		
+		
+		
 	}
     
     unset($result);

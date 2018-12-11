@@ -21,6 +21,16 @@ try{
     )";    
     $pdo->exec($sql);
     echo "Table created successfully.";
+	$username =  "admin";
+		$password =  password_hash("admin", PASSWORD_DEFAULT);
+		$lagenNr = "0";
+		$adress = "admin";
+	    
+		$imgContent = "";
+		
+		$sql = "INSERT INTO login (username, password, lagenNr, adress, image) VALUES ('$username','$password', '$lagenNr', '$adress', '$imgContent')";
+		$result = $pdo->query($sql);
+		
 } catch(PDOException $e){
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
