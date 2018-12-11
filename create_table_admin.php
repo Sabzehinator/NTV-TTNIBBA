@@ -20,6 +20,15 @@ try{
 	  image MEDIUMTEXT NOT NULL
     )";    
     $pdo->exec($sql);
+    $sql = "CREATE TABLE bokadetider(
+	    
+        lagNr varchar(100) NOT NULL,
+        id INT(255) NOT NULL,
+        vecka VARCHAR(60) NOT NULL,
+        dag VARCHAR(60) NOT NULL,
+	  tid VARCHAR(60) NOT NULL
+    )";    
+    $pdo->exec($sql);
     echo "Table created successfully.";
 	$username =  "admin";
 		$password =  password_hash("admin", PASSWORD_DEFAULT);
