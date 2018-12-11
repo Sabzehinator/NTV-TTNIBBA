@@ -31,7 +31,7 @@ try{
 		// lägenhetsnummer finns i variabeln $lagenNr fast det kan vara en string, idk.
 		
 		
-		$sql = "INSERT INTO bokning (lagenNr, id, vecka, dag, tid) VALUES ('$lagenNr','0','0','0','0')";
+		$sql = "INSERT INTO bokadetider (lagNr, id, vecka, dag, tid) VALUES ('$lagenNr','0','0','0','0')";
 		$result = $pdo->query($sql);
 		
 		
