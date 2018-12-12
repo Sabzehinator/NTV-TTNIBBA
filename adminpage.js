@@ -46,12 +46,15 @@ $(document).ready(function () {
                 FR.readAsDataURL(files[0]).done;
             }
         });
+		
+		location.reload(false);
 
     });
 
 
     document.getElementById("delete").onclick = (function () {
         user_action_remove(document.getElementById("lagenNrTXTB").value);
+		location.reload(false);
     });
 
     function user_action_remove(lagenNr) {

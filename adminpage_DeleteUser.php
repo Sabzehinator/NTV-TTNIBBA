@@ -21,6 +21,10 @@ try{
 	    
 	    $result = $pdo->query($sql);
 		
+		$sql = "DELETE FROM bokadetider WHERE lagNr=\"" .$THE_DATA. "\"";
+	    
+	    $result = $pdo->query($sql);
+		
 		
 		
 	}
