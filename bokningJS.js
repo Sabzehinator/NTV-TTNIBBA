@@ -13,8 +13,8 @@ var knappid = bokadetider[i].substring((knappidpos + 1), (substringend));
 
 
 
-
-$("#"+knappid).css("background-color","red");
+$("#"+knappid).text('.....BOKAD......');
+$("#"+knappid).css("background-color","red",);
 $("#"+knappid).prop("disabled",true);
 
 
