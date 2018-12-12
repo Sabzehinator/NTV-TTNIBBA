@@ -29,6 +29,7 @@ if(!isset($_SESSION))
 <script type="text/javascript" src="bokningJS.js"></script>
 <form action="insertbokning.php" id="boka" method="POST">
 <b>Välkommen ditt Lägenhetsnummer är: <?php echo $_SESSION["lagenNr"]; ?>
+<a href="login.php">         Logout</a>
 <br>
 <br>
 <br>
