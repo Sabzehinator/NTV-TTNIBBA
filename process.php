@@ -28,7 +28,7 @@ try{
            
              $row['lagenNr'];
              $row['password'];
-            
+             $msg ="Login misslyckades!";
 			 
 			 $hash=$row['password'];
 			
@@ -42,6 +42,7 @@ try{
 				exit;
             } else {
               include_once "login.php";
+			  echo "<script type='text/javascript'>alert('$msg');</script>";
             }		
 			 	 
             }		
